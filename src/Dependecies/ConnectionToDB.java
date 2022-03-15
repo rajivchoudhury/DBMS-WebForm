@@ -10,7 +10,7 @@ public class ConnectionToDB {
 
     public ConnectionToDB(){
         try{
-            String url = "jdbc:mysql://127.0.0.1:3306/OrderManagementSystem?user=root&password=Rocky-2811";
+            String url = "jdbc:mysql://127.0.0.1:3306/OrderManagementSystem?user=root&password=pw";
             connection = DriverManager.getConnection(url);
             statement = connection.createStatement();
             System.out.println(1);
