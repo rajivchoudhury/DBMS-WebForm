@@ -1,7 +1,12 @@
-package Dependecies;
+package Dependecies.User;
 
 import java.awt.*;
 import javax.swing.*;
+
+import Dependecies.ConnectionToDB;
+import Dependecies.HomePage;
+import Dependecies.ShowTablesRemove;
+
 import java.awt.event.*;
 import java.sql.*;
 
@@ -79,7 +84,7 @@ public class RemoveUser implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == backButton){
             frame.setVisible(false);
-            new HomePage();
+            new ShowTablesRemove();
         }
         if(e.getSource() == searchButton){
             try{
@@ -136,7 +141,7 @@ public class RemoveUser implements ActionListener{
                 if(flag >= 1){
                     JOptionPane.showMessageDialog(null, "Data Removed Succesfully");
                     frame.setVisible(false);
-                    new RemoveUser();
+                    new HomePage();
                 }
                 else{
                     JOptionPane.showMessageDialog(null, "Error Deleting message");

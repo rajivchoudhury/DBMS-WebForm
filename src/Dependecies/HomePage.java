@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class HomePage implements ActionListener{
     JFrame frame;
     JLabel heading;
-    JButton addButton, viewButton, removeButton, updateButton, closeButton;
+    JButton addButton, viewButton, removeButton, updateButton, closeButton, exportButton, importButton;
 
     public HomePage(){
         frame = new JFrame("Order Management Homepage");
@@ -56,6 +56,18 @@ public class HomePage implements ActionListener{
         closeButton.addActionListener(this);
         imageLabel.add(closeButton);
         
+        exportButton = new JButton("Export");
+        exportButton.setBounds(420, 260, 100, 40);
+        exportButton.setFont(new Font("serif",Font.BOLD,15));
+        exportButton.addActionListener(this);
+        imageLabel.add(exportButton);
+
+        importButton = new JButton("Import");
+        importButton.setBounds(530, 260, 100, 40);
+        importButton.setFont(new Font("serif",Font.BOLD,15));
+        importButton.addActionListener(this);
+        imageLabel.add(importButton);
+
         frame.setVisible(true);
         frame.setSize(700, 500);
         frame.setLocation(100, 80);
@@ -69,22 +81,30 @@ public class HomePage implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == addButton){
             frame.setVisible(false);
-            new AddUser();
+            new ShowTablesInsert();
         }
         if(e.getSource() == viewButton){
             frame.setVisible(false);
-            new ViewUser();
+            new ShowTablesView();
         }
         if(e.getSource() == removeButton){
             frame.setVisible(false);
-            new RemoveUser();
+            new ShowTablesRemove();
         }
         if(e.getSource() == updateButton){
             frame.setVisible(false);
-            new UpdateUser();
+            new ShowTablesUpdate();
         }
         if(e.getSource() == closeButton){
             System.exit(0);
+        }
+        if(e.getSource() == exportButton){
+            frame.setVisible(false);
+            new ShowTablesExport();
+        }
+        if(e.getSource() == importButton){
+            frame.setVisible(false);
+            new ShowTablesImport();
         }
     }
 }

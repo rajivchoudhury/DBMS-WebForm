@@ -1,7 +1,11 @@
-package Dependecies;
+package Dependecies.User;
 
 import java.awt.*;
 import javax.swing.*;
+
+import Dependecies.ConnectionToDB;
+import Dependecies.ShowTablesView;
+
 import java.awt.event.*;
 import java.sql.*;
 
@@ -67,7 +71,7 @@ public class ViewUser implements ActionListener{
         }
         if(e.getSource() == cancelButton){
             frame.setVisible(false);
-            new HomePage();
+            new ShowTablesView();
         }
     }
 

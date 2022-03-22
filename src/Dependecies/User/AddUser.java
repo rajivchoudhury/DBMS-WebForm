@@ -1,7 +1,12 @@
-package Dependecies;
+package Dependecies.User;
 
 import java.awt.*;
 import javax.swing.*;
+
+import Dependecies.ConnectionToDB;
+import Dependecies.HomePage;
+import Dependecies.ShowTablesInsert;
+
 import java.awt.event.*;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.SQLSyntaxErrorException;
@@ -96,7 +101,7 @@ public class AddUser implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == cancelButton){
             frame.setVisible(false);
-            new HomePage();
+            new ShowTablesInsert();
         }
         if(e.getSource() == submitButton){
             try{

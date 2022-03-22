@@ -1,7 +1,8 @@
-package Dependecies;
+package Dependecies.User;
 
 import java.awt.*;
 import javax.swing.*;
+
 import java.awt.event.*;
 import java.sql.*;
 

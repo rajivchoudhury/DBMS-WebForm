@@ -1,7 +1,12 @@
-package Dependecies;
+package Dependecies.User;
 
 import java.awt.*;
 import javax.swing.*;
+
+import Dependecies.ConnectionToDB;
+import Dependecies.HomePage;
+import Dependecies.ShowTablesUpdate;
+
 import java.awt.event.*;
 import java.sql.*;
 
@@ -100,7 +105,7 @@ class SearchUser implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == cancelButton){
             frame.setVisible(false);
-            new HomePage();
+            new ShowTablesUpdate();
         }
         if(e.getSource() == submitButton){
             try{
