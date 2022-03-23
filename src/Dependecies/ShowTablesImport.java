@@ -80,12 +80,12 @@ public class ShowTablesImport implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == userTable){
-            frame.setVisible(false);
-            new Dependecies.User.UpdateUser();
+            // frame.setVisible(false);
+            new Dependecies.User.ImportUser();
         }
         if(e.getSource() == cartTable){
             // frame.setVisible(false);
-            // new ViewUser();
+            new Dependecies.ShoppingCart.ImportCart();
         }
         if(e.getSource() == orderTable){
             // frame.setVisible(false);

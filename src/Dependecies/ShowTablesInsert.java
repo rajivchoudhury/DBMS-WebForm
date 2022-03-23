@@ -84,8 +84,8 @@ public class ShowTablesInsert implements ActionListener{
             new Dependecies.User.AddUser();
         }
         if(e.getSource() == cartTable){
-            // frame.setVisible(false);
-            // new ViewUser();
+            frame.setVisible(false);
+            new Dependecies.ShoppingCart.AddCart();
         }
         if(e.getSource() == orderTable){
             // frame.setVisible(false);
